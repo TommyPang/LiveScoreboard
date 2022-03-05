@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+        <title>Login</title>
+        <link rel="stylesheet" href="css/login.css">
+    </head>
+    <body>
+        <div id="login_div" class="main-div">
+            <h3>Admin Login</h3>
+            <input type="email" placeholder="Email..." id="email_field" />
+            <input type="password" placeholder="Password..." id="password_field" />
+
+            <button onclick="login()">Login to Account</button>
+        </div>
+
+        <div id="user_div" class="loggedin-div">
+            <h3>Welcome</h3>
+            <p id="user_para">Welcome to admin page. You're currently logged in.</p>
+            <button onclick="logout()">Logout</button>
+        </div>
+
+
+        <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            const firebaseConfig = {
+                apiKey: "AIzaSyBKSSsbxy5_ARth7GfY8xjjrd1ShMAeGZQ",
+                authDomain: "scoreboard1-8914b.firebaseapp.com",
+                databaseURL: "https://scoreboard1-8914b-default-rtdb.firebaseio.com",
+                projectId: "scoreboard1-8914b",
+                storageBucket: "scoreboard1-8914b.appspot.com",
+                messagingSenderId: "376573419671",
+                appId: "1:376573419671:web:985337a307ace7549609d2",
+                measurementId: "G-37E9HLEGF6"
+            };
+            firebase.initializeApp(firebaseConfig);
+        </script>
+        <script src="js/login.js"></script>
+    </body>
+</html>

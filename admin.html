@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <title>Scoreboard</title>
+    <head>
+        <link rel="stylesheet" href="css/index.css">
+        <link rel="stylesheet" href="css/admin.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    </head>
+<body>
+    <div class="top-banner">
+        <h2 style="font-family: Georgia, serif">Welcome to admin page. You're currently logged in. You may use the buttons to update the live score</h2>
+        <button class="logout" onclick="logout()">Logout</button>
+    </div>
+    <div class="container">
+        <div class="UHS">
+
+            <div class="team-label">
+                <h1>UHS</h1>
+            </div>
+
+            <div class="score">
+                <h1 id="uhs-score">0</h1>
+            </div>
+
+            <div class="buttons">
+                <button onclick="update('minus-uhs')" class="button">
+                    <span>&#8722;</span>
+                </button>
+
+                <button onclick="update('reset')" class="button"> Reset </button>
+
+                <button onclick="update('plus-uhs')" class="button">
+                    <span>&#43;</span>
+                </button>
+            </div>
+
+        </div>
+
+        <div class="Peths">
+
+            <div class="team-label">
+                <h1>Peths</h1>
+            </div>
+
+            <div class="score">
+                <h1 id="peths-score">0</h1>
+            </div>
+
+            <div class="buttons">
+                <button onclick="update('minus-peths')" class="button">
+                    <span>&#8722;</span>
+                </button>
+
+                <button onclick="update('reset')" class="button"> Reset </button>
+
+                <button onclick="update('plus-peths')" class="button">
+                    <span>&#43;</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+    <script type="text/javascript" src="js/admin.js"></script>
+
+</body>
+</html>
